@@ -28,7 +28,16 @@ TARGET_BOARD_PLATFORM := mt6761
 PRODUCT_PLATFORM := mt6761
 
 # A/B
-AB_OTA_UPDATER := true								   
+AB_OTA_UPDATER := true
+
+AB_OTA_PARTITIONS += \
+    system \
+    vendor \
+    product \
+    system_ext \
+    boot \
+    vbmeta_vendor \
+    vbmeta_system							   
 
 # MTK Hardware
 BOARD_HAS_MTK_HARDWARE := true
