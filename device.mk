@@ -1,6 +1,6 @@
 #
-# Copyright (C) 2022 The Android Open Source Project
-# Copyright (C) 2022 SebaUbuntu's TWRP device tree generator
+# Copyright (C) 2024 The Android Open Source Project
+# Copyright (C) 2024 SebaUbuntu's TWRP device tree generator
 #
 # SPDX-License-Identifier: Apache-2.0
 #
@@ -8,18 +8,14 @@
 LOCAL_PATH := device/infinix/X6512
 # A/B
 AB_OTA_PARTITIONS += \
-    boot \
-    dtbo \
-    lk \
-    preloader \
-    product \
     system \
-    vbmeta \
-    vbmeta_system \
-    vbmeta_vendor \
+    system_ext \
     vendor \
-    vendor_boot
-    
+    product \
+    boot \
+    vbmeta_vendor \
+    vbmeta_system
+
 AB_OTA_POSTINSTALL_CONFIG += \
     RUN_POSTINSTALL_system=true \
     POSTINSTALL_PATH_system=system/bin/otapreopt_script \
@@ -59,14 +55,6 @@ PRODUCT_PACKAGES += \
     android.hardware.fastboot@1.0-impl-mock \
     fastbootd
 
-# MTK PlPath Utils
-PRODUCT_PACKAGES += \
-    mtk_plpath_utils \
-    mtk_plpath_utils.recovery
-
-PRODUCT_PACKAGES_DEBUG += \
-    update_engine_client
-
 PRODUCT_PACKAGES += \
     otapreopt_script \
     cppreopts.sh \
@@ -76,4 +64,4 @@ PRODUCT_PACKAGES += \
 
 # OEM otacerts
 PRODUCT_EXTRA_RECOVERY_KEYS += \
-    $(LOCAL_PATH)/security/infinix
+    $(LOCAL_PATH)/security/infinix			  
