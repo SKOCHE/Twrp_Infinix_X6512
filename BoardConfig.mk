@@ -167,14 +167,14 @@ TW_MAX_BRIGHTNESS := 2047
 TW_EXCLUDE_DEFAULT_USB_INIT := true
 TARGET_USES_MKE2FS := true
 TW_EXCLUDE_APEX := true
-TW_EXCLUDE_NANO := false
+TW_EXCLUDE_NANO := true
 TW_EXCLUDE_TWRPAPP := true
 TW_EXCLUDE_TZDATA := true
 TW_EXCLUDE_BASH := true
 TW_EXCLUDE_LPTOOLS := true
-TW_INCLUDE_LPDUMP := true
+TW_EXCLUDE_LPDUMP := true
 TW_INCLUDE_NTFS_3G := true
-TW_INCLUDE_PYTHON := true
+TW_EXCLUDE_PYTHON := true
 TW_NO_SCREEN_BLANK := true
 TW_SCREEN_BLANK_ON_BOOT := true
 TW_INPUT_BLACKLIST := "hbtp_vm"							   
@@ -184,10 +184,6 @@ TW_EXTRA_LANGUAGES := false
 TW_DEFAULT_LANGUAGE := ru
 TW_USE_MODEL_HARDWARE_ID_FOR_DEVICE_ID := true
 TARGET_USE_CUSTOM_LUN_FILE_PATH := /config/usb_gadget/g1/functions/mass_storage.usb0/lun.%d/file
-
-# resetprop and magiskboot
-TW_INCLUDE_REPACKTOOLS := true
-
 
 # StatusBar
 TW_STATUS_ICONS_ALIGN := center
